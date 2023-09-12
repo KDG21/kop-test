@@ -9,9 +9,13 @@ $db_name = "dbname=kop";
 
 $conn = pg_connect("$db_host $db_port $db_user $db_password $db_name");
 
-$query = "SELECT * FROM kop_test";
+$query = "SELECT name FROM kop_test";
 $result = pg_query($conn, $query);
 
+$res = [];
+
 while ($row = pg_fetch_assoc($result)) {
-  print_r($row);
+  $res[] = $row['name'];
 }
+
+echo $res[0];
