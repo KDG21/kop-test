@@ -1,6 +1,4 @@
 <?php
-echo 'Hello World<br/>';
-
 $db_host = "host=kop.coyafpmaayqp.ap-northeast-2.rds.amazonaws.com";
 $db_port = "port=5432";
 $db_user = "user=kop";
@@ -18,4 +16,7 @@ while ($row = pg_fetch_assoc($result)) {
   $res[] = $row['name'];
 }
 
-echo $res[0];
+echo <<<EOM
+EC2 : Hello World
+RDS : $res[0]
+EOM;
