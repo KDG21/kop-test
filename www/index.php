@@ -1,2 +1,19 @@
 <?php
 echo 'Hello World';
+
+$db_host = "host=kop.coyafpmaayqp.ap-northeast-2.rds.amazonaws.com";
+$db_port = "port=5432";
+$db_user = "user=kop";
+$db_password = "password=12345678";
+$db_name = "dbname=kop";
+
+$conn = pg_connect("$db_host $db_port $db_user $db_password $db_name");
+
+$query = "SELECT * FROM kop-test";
+$result = pg_query($conn, $query);
+
+while ($row = pg_fetch_assoc($result)) {
+  $result = $row['name'];
+}
+
+echo $row;

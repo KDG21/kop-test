@@ -14,7 +14,7 @@ RUN sed -i 's/\/var\/www\/html/\/home\/kop\/www/g' /etc/apache2/sites-available/
 RUN sed -i 's/\/var\/www/\/home\/kop\/www/g' /etc/apache2/apache2.conf
 
 RUN cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
-    echo "error_log = /home/senior-nutrition/log/php_error.log" >> /usr/local/etc/php/php.ini && \
+    echo "error_log = /home/kop/log/php_error.log" >> /usr/local/etc/php/php.ini && \
     echo "date.timezone = 'Asia/Seoul' >> /usr/local/etc/php/php.ini
 
 RUN service apache2 restart && \
