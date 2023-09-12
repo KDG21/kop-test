@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kop-test
+    volumes:
+      - /home/ubuntu/kop/:/home/kop
+    ports:
+      - "80:80"
+    privileged: true
