@@ -1,5 +1,5 @@
 <?php
-echo 'Hello World';
+echo 'Hello World<br/>';
 
 $db_host = "host=kop.coyafpmaayqp.ap-northeast-2.rds.amazonaws.com";
 $db_port = "port=5432";
