@@ -17,6 +17,6 @@ while ($row = pg_fetch_assoc($result)) {
 }
 
 echo <<<EOM
-EC2 : Hello World
+EC2 : Hello World<br/>
 RDS : $res[0]
 EOM;
