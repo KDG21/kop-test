@@ -13,7 +13,7 @@ $query = "SELECT * FROM kop-test";
 $result = pg_query($conn, $query);
 
 while ($row = pg_fetch_assoc($result)) {
-  $result = $row['name'];
+  $res = $row['name'];
 }
 
-echo $row;
+echo $res;
